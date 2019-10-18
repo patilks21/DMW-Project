@@ -24,6 +24,7 @@ class randomforest:
         classifier.fit(X_train, y_train)
         # Predicting the Test set results
         y_pred = classifier.predict(X_test)
+
         # Making the Confusion Matrix
         cm = confusion_matrix(y_test, y_pred)
         print("confusion_matrix")

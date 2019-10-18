@@ -5,11 +5,20 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
+from matplotlib import pyplot as py
 class knn:
     def kn(self):
         print("---KNN Classification Algorithm---")
         # Import the data
         dataset = pd.read_csv('Social_Network_Ads.csv')
+        age=dataset['Age']
+        gender=dataset['Gender']
+        py.hist(age)
+        py.title("Age wise distribution")
+        py.xlabel("Age")
+        py.ylabel("Count")
+        py.show()
+
         x = dataset.iloc[:, [2,3]].values
         y = dataset.iloc[:, 4].values
         # train-test split

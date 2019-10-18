@@ -1,0 +1,1 @@
+run classify.py file using a python interpreter.
